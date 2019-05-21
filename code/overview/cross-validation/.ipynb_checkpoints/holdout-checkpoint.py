@@ -35,5 +35,5 @@ print("# of training data points: {} (~{}%)".format(len(x_train), TRAIN_SPLIT*10
 print("# of test data points: {} (~{}%)\n".format(len(x_test), (1-TRAIN_SPLIT)*100))
 
 print("If you'd like to see the actual data points, uncomment the print statements at the bottom of this script.")
-#print("Training data:\n{}\n".format(x_train))
-#print("Test data:\n{}".format(x_test))
+# print("Training data:\n{}\n".format(x_train))
+# print("Test data:\n{}".format(x_test))

@@ -10,8 +10,11 @@ x, y = make_regression(n_samples=500, n_features = 1, noise=25, random_state=0)
 # Split the data set into testing and training data
 x_train, x_test, y_train, y_test = train_test_split(x, y, random_state=0)
 
-# Create a linear regression object
-regression = linear_model.LinearRegression()
+# Create a linear regression object using least squares
+#regression = linear_model.LinearRegression()
+
+# Create a linear regression object using gradient descent 
+regression = linear_model.SGDRegressor(max_iter = 10000, tol = 0.001)
 
 # Train the model using the training set
 regression.fit(x_train, y_train)

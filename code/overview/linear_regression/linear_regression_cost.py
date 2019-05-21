@@ -3,7 +3,7 @@ import seaborn as sns
 from sklearn import datasets, linear_model
 from sklearn.datasets import make_regression
 from sklearn.model_selection import train_test_split
-
+import numpy as np
 # Create a data set for analysis
 x, y = make_regression(n_samples=500, n_features = 1, noise=25, random_state=0)
 
@@ -43,3 +43,6 @@ plt.yticks([])
 
 plt.tight_layout()
 plt.show()
+
+
+rms_error = np.sqrt(np.mean((y_predictions - y_test)**2))

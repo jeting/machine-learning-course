@@ -16,6 +16,7 @@ model = Pipeline([('poly', PolynomialFeatures(degree=10)), \
 ('linear', LinearRegression(fit_intercept=False))])
 regModel = Pipeline([('poly', PolynomialFeatures(degree=10)), \
 ('ridge', Ridge(alpha=5.0))])
+# alpha is the penalty parameter
 
 # Now we train on our data
 model = model.fit(x, y)
